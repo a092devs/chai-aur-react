@@ -1,8 +1,14 @@
-function App() {
-  const [count, setCount] = useState(0)
+import Chai from "./chai";
 
+function App() {
   return (
-    <h1>Chai aur React with Vite | Arsaalan Akhtar</h1>
+    // fragment <> empty tags
+    <>
+      <Chai />
+      <h3>chai aur react</h3>
+      <p>test paragraph</p>
+    </>
+    
   )
 }
 
