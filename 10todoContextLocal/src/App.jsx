@@ -1,5 +1,4 @@
 import {useEffect, useState} from 'react';
-// import './App.css';
 import {TodoForm, TodoItem} from './components';
 import {TodoProvider} from './contexts';
 
@@ -22,7 +21,7 @@ function App() {
     };
 
     const deleteTodo = (id) => {
-        setTodos((prev) => prev.filter((todo) => todo.id !== id));
+        setTodos((prev) => prev.filter((prevTodo) => prevTodo.id !== id));
     };
 
     const checkTodo = (id) => {
