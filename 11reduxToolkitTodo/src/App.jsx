@@ -1,16 +1,25 @@
-import AddTodo from './components/AddTodo';
-import RemoveTodo from './components/RemoveTodo';
-import UpdateTodo from './components/UpdateTodo';
+import DisplayTodos from './components/DisplayTodos';
+import Todos from './components/Todos';
+import './css/main.css';
 
+import {motion} from 'framer-motion';
 function App() {
     return (
-        <div className="text-center">
-            <h1 className="text-3xl font-bold mb-4">
-                Learn about Redux Toolkit
-            </h1>
-            <AddTodo />
-            <RemoveTodo />
-            <UpdateTodo />
+        <div className="App">
+            <motion.h1
+                initial={{y: -200}}
+                animate={{y: 0}}
+                transition={{type: 'spring', duration: 0.5}}
+                whileHover={{scale: 1.1}}>
+                Todo App
+            </motion.h1>
+            <motion.div
+                initial={{y: 1000}}
+                animate={{y: 0}}
+                transition={{type: 'spring', duration: 1}}>
+                <Todos />
+                <DisplayTodos />
+            </motion.div>
         </div>
     );
 }
