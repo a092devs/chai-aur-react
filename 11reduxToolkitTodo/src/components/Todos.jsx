@@ -35,11 +35,19 @@ const Todos = (props) => {
             setTodo('');
         }
     };
+
+    const handleKeyPress = (e) => {
+        if (e.key === 'Enter') {
+            add();
+        }
+    };
+
     return (
         <div className="addTodos">
             <input
                 type="text"
                 onChange={(e) => handleChange(e)}
+                onKeyPress={(e) => handleKeyPress(e)}
                 className="todo-input"
                 value={todo}
             />
